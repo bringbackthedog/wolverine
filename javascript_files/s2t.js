@@ -1,12 +1,4 @@
-<!-- html below --> 
 
-<button id="button" onclick="toggleStartStop()"></button>
-<div style="border:dotted;padding:10px">
-  <span id="final_span"></span>
-  <span id="interim_span" style="color:grey"></span>
-</div>
-
-//js below
 <script>
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
   var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
