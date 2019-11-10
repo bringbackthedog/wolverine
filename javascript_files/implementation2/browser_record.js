@@ -16,5 +16,5 @@
       .then(handleSuccess);
 </script>
 
-<!-- edit your html here -->
+<!-- edit html here -->
 <audio id="player" controls></audio>
