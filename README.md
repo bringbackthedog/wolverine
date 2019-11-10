@@ -2,37 +2,13 @@
 Speech to text toy project for auto transcription of school lectures
 
 _draft_
-__WSL audio input doesnt seem to work!__
+__WSL audio input doesnt seem to work! Microphone input doesn't seem to work on WSL so run in cmd or PowerSHell__   
 
-Tested on this system: 
-
-$sudo apt-get install lsb-release  
-$lsb_release -a  
-  > Distributor ID: Debian  
-  > Description:    Debian GNU/Linux 10 (buster)  
-  > Release:        10  
-  > Codename:       buster  
-
-$python3 --version
-> Python 3.7.3
-___
-
-
-- creating virtual environment
-  - $ python3 -m venv .env
-  - $sudo apt-get install python3-venv
-  - $ source .env/bin/activate
-  - to exit venv : $ deactivate
-  
-___
-
-_installing requirements_  
-$ pip3 install SpeechRecognition  
-$ pip3 install wheel  
-$ sudo apt-get install portaudio19-dev  
-$ pip3 install pyaudio  
-
-
-$ sudo apt-get install alsa-utils  
-
+For audio input I used fmedia available (here)[https://stsaz.github.io/fmedia/]  
+The Golang program takes raw audio input for stdin and outputs the text.  
+I used grep and sed to remove the extra informational text in the output, capturing only the transcription.   
+Execute this command to transcribe live audio:   
+```
+fmedia --record --channels=1 --rate=16000 --out=@stdout.wav | ./livecaption.exe | grep -o '".*"' | sed 's/"//g'
+```
 
