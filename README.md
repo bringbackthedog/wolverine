@@ -1,5 +1,5 @@
 # wolverine
-Speech to text toy project. At the moment it transcribes up to 60 seconds of text via the command line. 
+Quick and dirty speech to text toy project. At the moment it transcribes up to 60 seconds of text via the command line. 
 
 For audio input I used fmedia available (here)[https://stsaz.github.io/fmedia/]  
 
